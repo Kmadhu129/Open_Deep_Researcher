@@ -1,0 +1,215 @@
+LLM means “Large Language Model.”
+
+A Large Language Model is an AI system trained on huge amounts of text data to understand and generate human-like language.
+
+
+
+LLMs work on:
+
+1. Neural Networks (Deep Learning)
+
+LLMs are built using deep neural networks, especially Transformer architecture.
+
+2. Huge Amount of Data
+
+They learn patterns from massive datasets:
+
+Books
+
+Websites
+
+Articles
+
+Code
+
+Conversations
+
+3. Tokenization
+
+Text is converted into tokens (small word pieces) so the model can understand and process it.
+
+4. Mathematics & Probability
+
+LLMs use math to predict the next word/token.
+
+They generate answers by choosing the most likely next token.
+
+5. GPU/TPU Hardware
+
+Training LLMs requires very powerful computers:
+
+GPUs (Graphics Processing Units)
+
+TPUs (Tensor Processing Units)
+
+6. Transformer Architecture
+
+This includes:
+
+Attention mechanism → helps model focus on important words
+
+Self-attention layers → understand relationships between all words in a sentence
+
+
+
+Types of LLMs
+
+LLMs can be grouped in different ways. Below are the main categories:
+
+1. Based on Model Architecture
+a) Encoder-only Models
+
+Good for understanding tasks
+
+Examples:
+
+BERT
+
+RoBERTa
+
+DistilBERT
+
+b) Decoder-only Models
+
+Good for text generation
+
+Most chatbots use this type
+
+Examples:
+
+GPT-3, GPT-4, GPT-5
+
+LLaMA
+
+Mistral
+
+Falcon
+
+c) Encoder–Decoder Models
+
+Good for translation, summarization, Q&A
+
+Examples:
+
+T5
+
+BART
+
+FLAN-T5
+
+2. Based on Size
+a) Small LLMs
+
+< 1B parameters
+
+Fast, lightweight
+
+Examples: TinyLLaMA, Gemma 2B
+
+b) Medium LLMs
+
+1B – 30B parameters
+
+Balanced performance
+
+Examples: LLaMA 3 (8B, 12B, etc.)
+
+c) Large LLMs
+
+30B+ parameters
+
+High performance
+
+Examples: GPT-4, GPT-5, Claude 3, Gemini Ultra
+
+3. Based on Availability
+a) Open-source LLMs
+
+Free to use, modify
+
+Examples:
+
+LLaMA
+
+Mistral
+
+Falcon
+
+Gemma (Google)
+
+b) Closed-source LLMs
+
+Proprietary
+
+Examples:
+
+GPT-4, GPT-5
+
+Gemini Ultra
+
+Claude
+
+4. Based on Use Case
+a) General-purpose LLMs
+
+Chatting, reasoning, coding
+
+Examples: GPT-5, Claude, Gemini, LLaMA
+
+b) Domain-specific LLMs
+
+Trained for specific industries
+
+Examples:
+
+MedPaLM (medical)
+
+FinGPT (finance)
+
+LawGPT (legal)
+
+
+Simple Workflow of ChatGPT
+
+
+1. User Gives Input
+
+You type a question, message, or instruction.
+
+Example: “Explain OS concepts”
+
+2. Input is Converted to Tokens
+
+Your text is broken into small pieces called tokens.
+
+Tokens help the model understand meaning properly.
+
+3. Model Processes the Input
+
+The model reads your tokens.
+
+It checks patterns it learned during training.
+
+It looks at:
+
+Context (previous messages)
+
+Meaning of words
+
+Relationships between words
+
+4. Model Predicts the Best Next Tokens
+
+ChatGPT does NOT “think”; it predicts the next best token.
+
+It generates word-by-word (token-by-token).
+
+5. Output Tokens Combined into Text
+
+The predicted tokens form sentences.
+
+Those sentences become your final answer.
+
+6. Response Sent Back to User
+
+The output text is shown to you as ChatGPT’s reply.
