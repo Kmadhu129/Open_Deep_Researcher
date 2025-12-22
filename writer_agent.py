@@ -1,24 +1,12 @@
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
+import os
 
 class WriterAgent:
-    def __init__(self, openai_key):
-        self.llm = ChatOpenAI(model="gpt-4o-mini", api_key=openai_key)
+    def __init__(self):
+        self.llm = ChatGroq(
+            groq_api_key=os.getenv("GROQ_API_KEY"),
+            model_name="llama-3.1-8b-instant"
+        )
 
-    def run(self, state):
-        prompt = f"""
-Write a clean, structured research summary.
-
-Main Question:
-{state.question}
-
-Sub Questions:
-{state.sub_questions}
-
-Search Results:
-{state.search_results}
-
-Write a final consolidated answer.
-"""
-
-        answer = self.llm.invoke(prompt).content
-        return {"final_answer": answer}
+    def generate(self, messages):
+        return self.llm.invoke(messages).content
