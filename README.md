@@ -76,71 +76,32 @@ Hardware Dependencies -
 
 High-Level Architecture
 
-+----------------------+
-|        User          |
-| (Web Browser)        |
-+----------+-----------+
-           |
-           v
-+----------------------+
-|   Streamlit UI       |
-|  - Chat Interface    |
-|  - Sidebar Tools     |
-|  - History Panel     |
-+----------+-----------+
-           |
-           v
-+-------------------------------+
-|     Backend Interface         |
-|   (Request Controller)        |
-|-------------------------------|
-| - Mode Selection              |
-| - Context Management          |
-| - Follow-up Detection         |
-+----------+--------------------+
-           |
-           v
-+------------------------------------------------+
-|               Processing Layer                 |
-|------------------------------------------------|
-|                                                |
-|  +----------------+     +-------------------+ |
-|  | General Web    |     | Academic Papers   | |
-|  | Mode           |     | Mode              | |
-|  |----------------|     |-------------------| |
-|  | Groq LLM       |     | Tavily Search     | |
-|  | (Answering)    |     | (Initial Query)   | |
-|  |                |     | Groq LLM          | |
-|  |                |     | (Follow-ups)      | |
-|  +----------------+     +-------------------+ |
-|                                                |
-|  +----------------+     +-------------------+ |
-|  | PDF Summarizer |     | URL Summarizer    | |
-|  |----------------|     |-------------------| |
-|  | PyPDF2         |     | Web Scraping      | |
-|  | Groq LLM       |     | (BeautifulSoup)   | |
-|  |                |     | Groq LLM          | |
-|  +----------------+     +-------------------+ |
-|                                                |
-+----------------------+-------------------------+
-                       |
-                       v
-+----------------------------------+
-|   Response Generation Layer      |
-|----------------------------------|
-| - Final Answer                   |
-| - References (if any)            |
-| - Formatted Output               |
-+----------------------+-----------+
-                       |
-                       v
-+----------------------------------+
-|   Memory & Persistence Layer     |
-|----------------------------------|
-| - Chat History (JSON)            |
-| - Title, Date & Time             |
-| - Session Context                |
-+----------------------------------+
+High-Level Architecture
+
+User
+ │
+ ▼
+Streamlit UI
+ │
+ ▼
+Backend Interface (Controller)
+ │
+ ├── General Web Mode ──► Groq LLM
+ │
+ ├── Academic Papers Mode
+ │     ├── Tavily Search (first query only)
+ │     ├── Paper Context Storage
+ │     └── Follow-up handled by LLM
+ │
+ ├── PDF Summarizer ──► PyPDF2 + Groq
+ │
+ └── URL Summarizer ──► Web Scraping + Groq
+ │
+ ▼
+Response + References
+ │
+ ▼
+Chat History Storage (JSON)
 
 5. Workflow
 
