@@ -76,32 +76,7 @@ Hardware Dependencies -
 
 High-Level Architecture
 
-High-Level Architecture
-
-User
- │
- ▼
-Streamlit UI
- │
- ▼
-Backend Interface (Controller)
- │
- ├── General Web Mode ──► Groq LLM
- │
- ├── Academic Papers Mode
- │     ├── Tavily Search (first query only)
- │     ├── Paper Context Storage
- │     └── Follow-up handled by LLM
- │
- ├── PDF Summarizer ──► PyPDF2 + Groq
- │
- └── URL Summarizer ──► Web Scraping + Groq
- │
- ▼
-Response + References
- │
- ▼
-Chat History Storage (JSON)
+![Architecture Diagram](docs/architecture.png)
 
 5. Workflow
 
