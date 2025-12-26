@@ -1,4 +1,4 @@
-# 🧠 Open Deep Researcher – AI Research Assistant
+#  Open Deep Researcher – AI Research Assistant
 
 ---
 
@@ -8,7 +8,7 @@
 
 ---
 
-## **2. Project Overview (Brief Description)**
+## **2. Project Overview **
 
 **Open Deep Researcher** is an AI-powered research assistant designed to help users explore topics, analyze academic papers, and summarize documents through an interactive chat-based interface.
 
@@ -104,6 +104,23 @@ The system produces:
 - URL content summaries
 - Exportable chat history as PDF
 
+### General Web Mode Output
+![General Web Output](docs/output_general_web.png)
+
+### Academic Papers Mode Output
+![Academic Papers Output](docs/output_academic.png)
+
+![Academic Papers Output](docs/output_academic2.png)
+
+![Academic Papers Output](docs/output_academic3.png)
+
+### PDF Summarization Output
+![PDF Summary Output](docs/output_pdf.png)
+
+### URL Summarization Output
+![URL Summary Output](docs/output_url.png)
+
+
 ---
 
 ## **9. Limitations**
@@ -128,8 +145,8 @@ The system produces:
 
 ## **11. Deployed Project Link**
 
-🔗 **Live Application:**  
-👉 *[Paste your Streamlit deployment link here]*
+ **Live Application:**  
+   *https://infosysinternshipproject-3ysxw3lc6mkyi5iwufkyyu.streamlit.app/*
 
 ---
 
