@@ -1,204 +1,141 @@
-1. Project Title -
+# 🧠 Open Deep Researcher – AI Research Assistant
 
-Open Deep Researcher – A Context-Aware AI Research Assistant
+---
 
-2. Project Overview -
+## **1. Project Title**
 
-   Open Deep Researcher is an AI-powered research assistant designed to help users explore topics, analyze academic papers, and summarize documents through a conversational interface.
+**Open Deep Researcher – A Context-Aware AI Research Assistant**
 
-Core Objective -
+---
 
-   The main objective of this project is to build a ChatGPT-like research assistant that can:
+## **2. Project Overview (Brief Description)**
 
-   Answer general questions using web knowledge
+**Open Deep Researcher** is an AI-powered research assistant designed to help users explore topics, analyze academic papers, and summarize documents through an interactive chat-based interface.
 
-   Retrieve and analyze academic research papers
+**Key objectives of the project:**
+- Provide accurate answers using general web knowledge
+- Enable academic paper discovery and analysis
+- Support context-aware follow-up questions
+- Allow PDF and URL summarization
+- Maintain chat history for continuity
 
-   Maintain conversational context for follow-up questions
+---
 
-   Summarize PDFs and URLs interactively
+## **3. Software and Hardware Dependencies**
 
-   Store and manage chat history for reuse
+### **Software Dependencies**
 
-Problem It Solves -
+- **Programming Language**
+  - Python 3.10+
 
-  Traditional search tools do not support:
+- **Libraries & Frameworks**
+  - Streamlit – Frontend UI
+  - LangChain & LangChain-Groq – LLM orchestration
+  - Tavily API – Academic paper search
+  - BeautifulSoup4 – Web scraping
+  - PyPDF2 – PDF text extraction
+  - ReportLab – Export chat as PDF
+  - Requests – HTTP requests
+  - python-dotenv – Environment variable handling
 
-  Context-aware follow-up questioning
+- **APIs Used**
+  - Groq API – Language model inference
+  - Tavily API – Research paper retrieval
 
-  Academic paper–specific analysis
+### **Hardware Dependencies**
 
-  Integrated document and URL summarization in one interface
+- Minimum 4 GB RAM
+- No GPU required
+- Works on standard laptops/desktops
 
-  This project addresses these limitations by combining LLMs, search APIs, and session memory into a unified system.
+---
 
-3. Software and Hardware Dependencies
-
-Software Dependencies
-
-Programming Language
-
-  Python 3.10+
-
-Libraries & Frameworks
-
-  Streamlit – User Interface
-
-  LangChain & LangChain-Groq – LLM orchestration
-
-  Tavily API – Academic paper search
-
-  BeautifulSoup4 – Web content extraction
-
-  PyPDF2 – PDF text extraction
-
-  ReportLab – Export chat as PDF
-
-  Requests – HTTP requests
-
-  python-dotenv – Environment variable management
-
-APIs Used -
-
-  Groq API – Large Language Model inference
-
-  Tavily API – Research paper search
-
-Hardware Dependencies -
-
-  Minimum 4 GB RAM
-
-  No GPU required (cloud-based LLM inference)
-
-  Works on standard laptops/desktops
-
-4. Architecture Diagram
-
-High-Level Architecture
+## **4. Architecture Diagram**
 
 ![Architecture Diagram](docs/architecture.png)
 
-5. Workflow
+---
 
-Step-by-Step Flow
+## **5. Workflow**
 
-   User selects a mode from the sidebar:
+**Step-by-step system workflow:**
+- User selects a mode (General Web / Academic Papers / PDF / URL)
+- User provides input (query, PDF, or URL)
+- Backend identifies query type and context
+- Relevant tool or agent is invoked
+- LLM generates a response
+- Output is displayed and stored in chat history
 
-   General Web
+---
 
-   Academic Papers
+## **6. Agent Roles (Brief Explanation)**
 
-   PDF Summarizer
+- **Planner**
+  - Determines whether the query is a new search or a follow-up
+  - Decides when to invoke search tools or reuse context
 
-   URL Summarizer
+- **Executor / Writer**
+  - Uses Groq LLM to generate answers and summaries
+  - Ensures responses are concise and context-aware
 
-   User enters a query or uploads a document.
+- **Agent Pipeline**
+  - UI → Backend Controller → Tools / LLM → Response
+  - Maintains conversational memory across interactions
 
-Backend processes the request:
+---
 
-  Determines whether it is a new query or a follow-up
+## **7. Sample Working Demo (Optional)**
 
-  Routes the query to the correct tool or agent
+**Example interaction (Academic Papers mode):**
+- *User:* What are recent methods for diabetes prediction?
+- *Assistant:* Provides answer with references
+- *User:* Summarize the first paper
+- *Assistant:* Summarizes only the selected paper
 
-  APIs and LLM are invoked as required.
+---
 
-  Response is generated and displayed in chat format.
-
-  Conversation is saved in history with title, date, and time.
-
-6. Agent Roles (Brief Explanation)
-
-Planner
-
-  Determines whether the query is:
-
-  A new academic search
-
-  A follow-up question
-
-  A URL-based analysis
-
-  Prevents unnecessary repeated searches.
-
-Executor / Writer
-
-  Uses Groq LLM to:
-
-  Generate answers
-
-  Summarize documents
-
-  Analyze research papers
-
-  Ensures answers are context-aware and concise.
-
-Agent Pipeline
-
-  UI → Backend Interface → Appropriate Tool (LLM / Tavily / Scraper)
-
-  Maintains session memory for conversational continuity.
-
-7. Sample Working Demo (Optional)
-
-Example:
-
-Academic Papers Mode
-
-   User: What are recent methods for diabetes prediction?
-   Assistant: (answers with references)
-
-   User: Summarize the first paper
-   Assistant: (summarizes only the first paper)
-
-Features Demonstrated
-
-   Context-aware follow-up
-
-   Reference-based answering
-
-   Academic content handling
-
-8. Outputs / Results
+## **8. Outputs / Results**
 
 The system produces:
+- Conversational answers
+- Academic research summaries
+- Reference links to papers
+- PDF summaries (short / medium / long)
+- URL content summaries
+- Exportable chat history as PDF
 
-   Conversational answers
+---
 
-   Academic research summaries
+## **9. Limitations**
 
-   Reference links to research papers
+- Academic results depend on Tavily API coverage
+- Very large PDFs may be truncated
+- Web page structure can affect URL extraction
+- Multilingual support is not yet implemented
 
-   PDF summaries (short / medium / long)
+---
 
-   URL content summaries
+## **10. Future Enhancements**
 
-   Exportable chat history as PDF
+- User authentication and personalized history
+- Support for additional academic databases
+- Multi-document analysis
+- Improved citation formatting (APA / IEEE)
+- Advanced agent reasoning using LangGraph
+- Offline document indexing
 
-9. Limitations
+---
 
-   Academic search depends on Tavily API coverage.
+## **11. Deployed Project Link**
 
-   Very long PDFs may be truncated due to token limits.
+🔗 **Live Application:**  
+👉 *[Paste your Streamlit deployment link here]*
 
-   Web page structure variations can affect URL extraction.
+---
 
-   Does not yet support multilingual input/output.
+## **12. Short Project Summary**
 
-10. Future Enhancements
+- AI-powered research assistant with chat-based interaction  
+- Supports web answers, academic papers, PDF and URL summarization  
 
-   User authentication and personalized history
-
-   Support for more academic databases (Semantic Scholar, PubMed)
-
-   Multi-file PDF analysis
-
-   Improved citation formatting (APA/IEEE)
-
-   Fine-grained agent reasoning with LangGraph
-
-   Offline document indexing
-
-11. Deployed Project Link
-
-Live Application:
-    https://infosysinternshipproject-3ysxw3lc6mkyi5iwufkyyu.streamlit.app/
+---
