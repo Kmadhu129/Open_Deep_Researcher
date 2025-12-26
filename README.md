@@ -68,7 +68,7 @@ Open Deep Researcher – A Context-Aware AI Research Assistant
 
 ---
 
-## **6. Agent Roles (Brief Explanation)**
+## **6. Agent Roles **
 
 - **Planner**
   - Determines whether the query is a new search or a follow-up
@@ -84,7 +84,7 @@ Open Deep Researcher – A Context-Aware AI Research Assistant
 
 ---
 
-## **7. Sample Working Demo (Optional)**
+## **7. Sample Working Demo **
 
 **Example interaction (Academic Papers mode):**
 - *User:* What are recent methods for diabetes prediction?
