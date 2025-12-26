@@ -2,13 +2,13 @@
 
 ---
 
-## **1. Project Title**
+## 1. Project Title
 
-**Open Deep Researcher – A Context-Aware AI Research Assistant**
+Open Deep Researcher – A Context-Aware AI Research Assistant
 
 ---
 
-## **2. Project Overview **
+## 2. Project Overview 
 
 **Open Deep Researcher** is an AI-powered research assistant designed to help users explore topics, analyze academic papers, and summarize documents through an interactive chat-based interface.
 
